@@ -1,0 +1,73 @@
+<div class="col-lg-12">
+    <div class="card rounded-0 mt-5 mb-4 mx-30">
+        <div class="card-body">
+            <h2 class="text-center">Create New User</h2>
+        </div>
+    
+    </div>
+<%= form_for @user, url: /user/register_path do |f| %>
+<div class="row justify-content-center">
+    <div class="col-lg-4">
+    <div class="form-group">
+    <%= f.label :username, class: 'mb-2' %>
+    <%= f.text_field :username, class: "form-control form-control-lg" %>
+  </div>
+</div>
+</div> 
+
+<div class="row justify-content-center">
+<div class="col-lg-4">
+  <div class="form-group">
+    <%= f.label :password, class: 'mb-2' %>
+    <%= f.number_field :password, class: "form-control form-control-lg" %>
+  </div>
+</div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= f.label :password_confirmation, class: 'mb-2' %>
+        <%= f.number_field :password_confirmation, class: "form-control form-control-lg" %>
+      </div>
+    </div>
+    </div>
+ 
+<div class="row justify-content-center">
+<div class="col-lg-4">
+  <div class="form-group">
+    <%= f.label :email, class: 'mb-2' %>
+    <%= f.email_field :email, class: "form-control form-control-lg" %>
+  </div>
+</div>
+</div>    
+  
+  <div class="row justify-content-center">
+  <div class="col-lg-4">
+  <div class="form-group">
+    <%= f.label :firstname, class: 'mb-2' %>
+    <%= f.text_area :firstname, class: "form-control form-control-lg" %>
+  </div>
+</div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-4">
+    <div class="form-group">
+      <%= f.label :lastname, class: 'mb-2' %>
+      <%= f.text_area :lastname, class: "form-control form-control-lg" %>
+    </div>
+  </div>
+  </div>
+
+<div class="row justify-content-center">
+  <div class="col-lg-4">
+  <div class="form-group">
+    <%= f.submit 'Create User', class: "btn btn-primary btn-lg mt-4" %>
+    <%= link_to "Back to User List", allUser_path, class: "btn btn-outline-primary btn-lg mt-4" %>
+  </div>
+  </div>
+</div>
+<% end %>
+</div>
+
